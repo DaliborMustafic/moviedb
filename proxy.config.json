@@ -1,0 +1,11 @@
+{
+  "/clip": {
+    "target": "https://localhost:3000",
+    "secure": true,
+    "pathRewrite": {
+    "^/clip": ""
+  },
+    "changeOrigin": true
+  }
+
+}

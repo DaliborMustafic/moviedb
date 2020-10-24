@@ -1,0 +1,66 @@
+.highlight{
+  background-color: #103d6a;
+  color : white
+
+ }
+
+.sidebar{
+  list-style: none;
+  color:white;
+  cursor: pointer;
+
+
+}
+.sidebar:hover{
+  color: white;
+}
+.list_container{
+
+  text-align: center;
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.12), 0 1px 4px rgba(0, 0, 0, 0.24);
+  margin-bottom: 20px;
+
+}
+.list_container:hover{
+  background-color: #103d6a;
+
+}
+.navbar_container{
+  margin-top: 20px;
+  position: relative;
+  z-index: 999;
+}
+.bg-dark {
+  background-color: #000 !important;
+}
+.navbar{
+
+  position: fixed;
+  z-index: 999;
+  top:0;
+  left:0;
+  right: 0;
+}
+
+.navbar_container{
+  position: absolute;
+  right: 0;
+  top:30px;
+  background-color: black;
+
+}
+.search{
+  width: 400px;
+  margin: 0 auto;
+}
+
+@media only screen and (max-width: 700px){
+
+  .search{
+    width: 200px;
+    margin: 0 auto;
+  }
+
+
+
+}

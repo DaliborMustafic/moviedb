@@ -1,0 +1,10 @@
+<div class="list-group list-group-flush w-100 align-items-stretch sidebar_div" >
+  <a href="#" style="background-color: #000000;color: white ;"class="list-group-item text-left d-inline-block list-group-item-action ">
+    Choose an Category
+  </a>
+  <a *ngFor="let api of arrayOfApiCalls; let i = index;" (click)="setRow(i); setApi($event)"  routerLink="/{{api.name}}/1"class="list-group-item text-left d-inline-block list-group-item-action sidebar" [ngClass]="{'highlight': selectedIndex === i}"> {{api.name}}</a>
+</div>
+<br>
+<br>
+
+

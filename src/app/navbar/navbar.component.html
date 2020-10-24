@@ -1,0 +1,20 @@
+<nav class="navbar navbar-expand-xl-sm navbar-dark bg-dark">
+  <a class="navbar-brand" href="#">My MovieDB</a>
+
+  <input class="form-control search" type="text" placeholder="Search" aria-label="Search" [(ngModel)]="myInput" >
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse  navbar_container" id="navbarSupportedContent">
+    <ul class="list-group bg-primar d-xl-sm-none burger_menu">
+      <div *ngFor="let api of arrayOfApiCalls; let i = index;" [ngClass]="{'highlight': selectedIndex === i}"
+        class="list_container">
+        <li (click)="setRow(i); setApi($event)" class="nav-item sidebar"> {{api.name}}</li>
+      </div>
+
+    </ul>
+
+
+  </div>
+</nav>

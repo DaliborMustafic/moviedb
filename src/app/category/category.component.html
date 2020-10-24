@@ -1,0 +1,76 @@
+<app-navbar (passData)="reciveData($event) " (headEmitter)="reciveHead($event)"></app-navbar>
+<br>
+<br>
+<div class="container-fluid">
+  <br>
+  <h4 *ngIf="head;else span" class="heading borderDiv">{{head}}</h4>
+  <div class="wrapper">
+
+    <div class="row">
+      <div class="col-3 d-none d-sm-block">
+
+        <!-- <app-sidebar (passData)="reciveData($event) " (headEmitter)="reciveHead($event)"></app-sidebar> -->
+      </div>
+
+      <div class="col-xl-9 col-xl-pull-12" *ngIf="movieList;else welcome">
+
+        <div *ngFor="let movie of movieList?.results; let i = index" >
+          <div class="row borderDiv main_card" *ngIf="movie.poster_path">
+            <div class="col-6 ">
+
+              <h3 *ngIf="movie.title; else name">{{movie.title}}</h3>
+              <ng-template  #name><h3 >{{movie.name}}</h3></ng-template>
+              <p class="text" (click)="showText($event)">  <b>Overwiev : <br></b> {{movie.overview}}</p>
+              <a class="button btn btn-secondary"  (click)="getClip(movie.id)">Watch Trailer</a>
+
+
+
+              <p *ngIf="movie.release_date; else release"><strong>Release date : <br></strong> {{ movie.release_date}}</p>
+            <ng-template #release> <br><strong>First Air Date : <br></strong> {{ movie.first_air_date}}</ng-template>
+            <p *ngIf="movie.vote_average > 0 "><br><strong>Vote Average : <br></strong> {{ movie.vote_average}} / 10 </p>
+
+            </div>
+            <div class="col-6 poster_container" >
+              <img class="img-fluid poster" src='https://image.tmdb.org/t/p/w500/{{ movie.poster_path}}' alt="">
+
+            </div>
+
+            <br>
+          </div>
+        </div>
+
+
+
+      </div>
+      <ng-template #welcome>
+        <div class="col-xl-9 col-xl-pull-12"  style="align-items: center;">
+          <h2  style="text-align: center;">Welcome to MovieDB</h2>
+          <img id="posi" src="https://res.cloudinary.com/people-matters/image/upload/fl_immutable_cache,w_624,h_351,q_auto,f_auto/v1517845732/1517845731.jpg" alt="" >
+
+        </div>
+
+      </ng-template>
+      <ng-template #span>
+        <h4 class="heading borderDiv"><span>Choose an Category</span></h4>
+      </ng-template>
+
+
+    </div>
+
+  </div>
+
+
+</div>
+
+<div  id="popup1" class="overlay" *ngIf="vid">
+  <div class="popup">
+
+    <a  class="close" (click)="destroy()" style="cursor: pointer;">&times;</a>
+    <div class="content">
+
+
+      <iframe width="560" height="315" [src]="link"  frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+  </div>
+</div>
+

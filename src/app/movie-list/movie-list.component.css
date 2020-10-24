@@ -1,0 +1,231 @@
+
+*{
+  margin:0;
+  padding: 0;
+}
+
+
+.poster{
+  max-height: 513px;
+  max-width: 428px;
+}
+
+.col-sm-xl-12{
+  display: flex;
+  flex-direction: row;
+}
+.borderDiv{
+
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.12), 0 1px 4px rgba(0, 0, 0, 0.24);
+  margin-bottom: 20px;
+}
+#posi{
+
+  padding: 0;
+  display: block;
+  margin: 0 auto;
+  max-height: 100%;
+  max-width: 100%;
+}
+
+
+.overlay
+{
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.7);
+  transition: opacity 500ms;
+  visibility: hidden;
+  opacity: 0;
+}
+  .overlay:target {
+  visibility: visible;
+  opacity: 1;
+  }
+
+  .popup {
+  margin: 70px auto;
+
+  background:transparent;
+  border-radius: 5px;
+  width: fit-content;
+  height: fit-content;
+  position: relative;
+  transition: all 5s ease-in-out;
+  }
+
+
+  .popup .close {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  transition: all 200ms;
+  font-size: 30px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #333;
+  }
+  .popup .close:hover {
+  color: #06D85F;
+  }
+  .popup .content {
+  max-height: 100%;
+  width: auto;
+  height: auto;
+  overflow: hidden;
+  }
+  iframe{
+    max-width: 100%;
+    margin: 0 auto;
+  }
+.heading{
+  text-align: center;
+  color:whitesmoke;
+  position: sticky;
+  top:56px;
+  z-index: 500;
+}
+
+/* .main_card{
+  padding: 2%;
+}
+ */
+
+.iframe_container{
+  background-color: white;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  display: flex;
+}
+.youtube_vid{
+  justify-content: center
+}
+
+.page{
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.pagination{
+  scroll-behavior: smooth;
+  border-top: 1px solid  rgba(32, 30, 30, 0.12);
+  border-left: 1px solid  rgba(32, 30, 30, 0.12);
+  border-right: 1px solid  rgba(32, 30, 30, 0.12);
+  position: fixed;
+  width: 200px;
+  overflow: hidden;
+  overflow-y: hidden;
+  bottom: 0;
+  left:50%;
+  margin-left: -100px;
+  background-color: white;
+
+}
+.pagination_with_buttons{
+  position: fixed;
+
+  width: 300px;
+  overflow: hidden;
+  overflow-y: hidden;
+  bottom: 0;
+  left:50%;
+  margin-left: -150px;
+}
+.left-btn{
+  position: fixed;
+  left:0
+}
+.right-btn{
+  position: fixed;
+  right: 0;
+}
+.left_click{
+  cursor: pointer;
+  position: relative;
+  left: 0;
+  width: 30px;
+  height: 30px;
+}
+.right_click{
+  cursor: pointer;
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  right: 0;
+}
+
+
+.page_active{
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  padding: 10px;
+  cursor: pointer;
+  background-color:rgb(16,61,106,1);
+  color: white;
+}
+
+.marquee {
+  position: fixed;
+  bottom: 150px;
+  width: 450px;
+  line-height: 50px;
+  white-space: nowrap;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+.marquee h2 {
+  display: inline-block;
+  position: fixed;
+  bottom: 150px;
+  padding-left: 100%;
+  animation: marquee 15s linear infinite;
+}
+@keyframes marquee {
+  0%   { transform: translate(0, 0); }
+  100% { transform: translate(-100%, 0); }
+}
+  @media screen and (max-width: 700px){
+    .box{
+    width: 70%;
+    }
+    .popup{
+    width: 70%;
+    }
+
+
+  }
+
+  @media only screen and (max-width: 885px){
+
+    .text{
+
+      display: block;
+      width: 100px;
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      cursor: pointer;
+    }
+    .show_text{
+
+      display: block;
+      cursor: pointer;
+    }
+
+
+
+
+  }
+
+
+
+
+
+
